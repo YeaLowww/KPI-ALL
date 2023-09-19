@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei UI";
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex-item {
+    font-size: 25px;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-left:solid 1px #ccc;
+    border-right:solid 1px #ccc;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.item-1, .item-7 {
+    display: flex;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: start;
+    width: 65%;
+    min-width: min-content;
+}
+
+.item-2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #eaf1dd;
+    border-bottom: solid 1px #ccc;
+    min-height: 10vh;
+}
+
+.item-3 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    background-color: whitesmoke;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item-4 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    background-color: #fde9d9;
+}
+
+.item-5 {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    background-color: #fde9d9;
+}
+
+.item-6 {
+    display: flex;
+    align-items: center;
+    background-color: #eaf1dd;
+    border-top:solid 1px #ccc;
+    min-height: 10vh;
+}
+.item-7 {
+    font-size: 15px;
+}
+
+.header, .footer {
+    min-height: 15vh;
+    display: flex;
+    background-color: #c6d9f1;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px #ccc;
+}
+
+.item-x, .item-y {
+    display: flex;
+    align-self: center;
+    text-align: center;
+    background-color: whitesmoke;
+    border: solid 1px #ccc;
+    margin: 2%;
+    width: 25%;
+    min-width: min-content;
+    padding: 1%;
+}
+#img_main {
+    width: 60%;
+    border-radius: 80px;
+    padding: 1.5%;
+}
+a {
+    color: #743bc9;
+    text-decoration:none;
+    line-height: 35px;
+}
+

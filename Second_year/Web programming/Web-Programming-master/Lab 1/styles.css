@@ -1,0 +1,120 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: "Microsoft YaHei UI" ;
+}
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#x, #y {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+}
+#headerX, #headerY {
+    background: whitesmoke;
+    width: 33%;
+    margin: 2%;
+    font-size: 13px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: fit-content(25%) fit-content(8.3%) fit-content(25%) max-content fit-content(8.3%) fit-content(25%);
+    /*3fr 1fr 4fr 1fr 3fr*/
+    grid-template-areas:
+            "first first first"
+            "second third fourth"
+            "fifth third fourth"
+            "fifth sixth fourth"
+            "seventh seventh seventh";
+    justify-items: stretch;
+    height: 100%;
+    width: 100%;
+}
+
+div {
+    border: solid 1px #ccc;
+}
+
+#first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c6d9f1;
+    grid-area: first;
+    font-size: 30px;
+}
+#second {
+    display: flex;
+    background-color: #eaf1dd;
+    align-items: center;
+    justify-content: center;
+    grid-area: second;
+    text-align: center;
+    font-size: 22px;
+}
+#third {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: third;
+    font-size: 17px
+}
+#fourth {
+    display: flex;
+    background-color: #fde9d9;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: fourth;
+    text-align: center;
+    font-size: 22px;
+}
+#fifth {
+    display: flex;
+    font-size: 25px;
+    background-color: #fde9d9;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-area: fifth;
+}
+#sixth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #eaf1dd;
+    grid-area: sixth;
+    font-size: 25px;
+}
+#seventh {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c6d9f1;
+    grid-area: seventh;
+}
+#footer{
+    font-size: 15px;
+    margin-left: 5%;
+    max-width: 65%;
+}
+a{
+    color: #743bc9;
+    text-decoration:none;
+}
+#img_main {
+    width: 60%;
+    border-radius: 80px;
+    padding: 1.5%;
+}
+

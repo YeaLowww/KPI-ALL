@@ -1,0 +1,110 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: "Microsoft YaHei UI" ;
+}
+body, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ol {
+margin: 26px;
+}
+.container {
+    display: grid;
+    text-align: center;
+    background-color: #c6d9f1;
+    grid-template-columns: 1fr 3fr 1fr;
+    font-size: 25px;
+    grid-template-areas:
+            "first first first"
+            "second third fourth"
+            "fifth third fourth"
+            "fifth sixth fourth"
+            "seventh seventh seventh";
+}
+.label{
+    align-self: center;
+}
+#first {
+    display: grid;
+    align-content:center;
+    margin-left: 5%;
+    text-align: start;
+    grid-area: first;
+    min-height: 15vh;
+}
+#second {
+    display: grid;
+    background-color: #eaf1dd;
+    align-content:center;
+    grid-area: second;
+    min-height: 10vh;
+    border-left:solid 1px #ccc;
+    border-bottom:solid 1px #ccc;
+    border-top:solid 1px #ccc;
+}
+#third {
+    background-color: white;
+    grid-area: third;
+    border-left:solid 1px #ccc;
+    border-right:solid 1px #ccc;
+    border-top:solid 1px #ccc;
+}
+#fourth {
+    display: grid;
+    align-content:center;
+    background-color: #fde9d9;
+    grid-area: fourth;
+    align-items: center;
+    border-bottom:solid 1px #ccc;
+    border-top:solid 1px #ccc;
+}
+#fifth {
+    display: grid;
+    align-content:center;
+    background-color: #fde9d9;
+    grid-area: fifth;
+    border-left:solid 1px #ccc;
+    border-bottom:solid 1px #ccc;
+}
+#sixth {
+    display: grid;
+    align-content:center;
+    background-color: #eaf1dd;
+    grid-area: sixth;
+    min-height: 10vh;
+    border: solid 1px #ccc;
+}
+#seventh {
+    display: grid;
+    align-content:center;
+    grid-area: seventh;
+    font-size: 15px;
+    margin-left: 5%;
+    min-height: 15vh;
+    text-align: start;
+}
+.item-x, .item-y {
+    text-align: center;
+    background-color: whitesmoke;
+    border: solid 1px #ccc;
+    margin: 6.5%;
+    font-size: 25px;
+    padding: 3.5%;
+    min-width: min-content;
+}
+.header, .footer {
+    grid-template-columns: 9fr 4fr;
+}
+#img_main {
+    width: 50%;
+    border-radius: 80px;
+    padding: 1.5%;
+}
+a{
+    color: #743bc9;
+    text-decoration:none;
+    line-height: 35px;
+}
