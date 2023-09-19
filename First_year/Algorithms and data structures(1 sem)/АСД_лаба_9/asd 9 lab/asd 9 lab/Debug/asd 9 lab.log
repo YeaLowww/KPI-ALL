@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\Саша Головня\Desktop\Асд\АСД_лаба_9\asd 9 lab\asd 9 lab\Source.cpp(10,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Саша Головня\Desktop\Асд\АСД_лаба_9\asd 9 lab\asd 9 lab\Source.cpp(24,21): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Саша Головня\Desktop\Асд\АСД_лаба_9\asd 9 lab\asd 9 lab\Source.cpp(26,12): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  asd 9 lab.vcxproj -> C:\Users\Саша Головня\Desktop\Асд\АСД_лаба_9\asd 9 lab\Debug\asd 9 lab.exe

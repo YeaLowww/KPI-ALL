@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Саша Головня\Desktop\Асд\АСД_лаба_8\lab8\OP lab8\Source.cpp(8,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Саша Головня\Desktop\Асд\АСД_лаба_8\lab8\OP lab8\Source.cpp(41,14): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Op lab8.vcxproj -> C:\Users\Саша Головня\Desktop\Асд\АСД_лаба_8\lab8\x64\Debug\Op lab8.exe
