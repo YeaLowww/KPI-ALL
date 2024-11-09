@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "projects": {
+        "pipes2": {
+            "projectType": "application",
+            "root": "",
+            "sourceRoot": "src",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/pipes2",
+                        "index": "src/index.html",
+                        "main": "src/main.ts",
+                        "polyfills": "src/polyfills.ts",
+                        "tsConfig": "tsconfig.json",
+                        "aot": true,
+                        "assets": "src/assets/users.json"
+                    }
+                },
+                
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "pipes2:build"
+                    }
+                }
+            }
+        }
+    },
+    "defaultProject": "pipes2",
+    "cli": {
+      "analytics": "6359be0e-87ed-473c-b535-d1260b600034"
+    }
+}

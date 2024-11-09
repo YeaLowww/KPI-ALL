@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "projects": {
+        "blog": {
+            "projectType": "application",
+            "root": "",
+            "sourceRoot": "src",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/blog",
+                        "index": "src/index.html",
+                        "main": "src/main.ts",
+                        "polyfills": "src/polyfills.ts",
+                        "tsConfig": "tsconfig.json",
+                        "aot": true,
+                        "assets": [
+                            "src/assets",
+                            "src/favicon.ico"
+                          ]
+                    }
+                },
+                
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "blog:build"
+                    }
+                }
+            }
+        }
+    },
+    "defaultProject": "blog",
+    "cli": {
+      "analytics": "6359be0e-87ed-473c-b535-d1260b600034"
+    }
+}
