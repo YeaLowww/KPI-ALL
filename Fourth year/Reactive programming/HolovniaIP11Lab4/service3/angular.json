@@ -1,0 +1,37 @@
+{
+    "version": 1,
+    "projects": {
+        "service3": {
+            "projectType": "application",
+            "root": "",
+            "sourceRoot": "src",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/service3",
+                        "index": "src/index.html",
+                        "main": "src/main.ts",
+                        "polyfills": "src/polyfills.ts",
+                        "tsConfig": "tsconfig.json",
+                        "aot": true,
+                        "styles": [
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "src/styles.css"
+                          ] 
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "service3:build"
+                    }
+                }
+            }
+        }
+    },
+    "defaultProject": "service3",
+    "cli": {
+      "analytics": "6359be0e-87ed-473c-b535-d1260b600034"
+    }
+}
