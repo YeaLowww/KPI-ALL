@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %} Головна сторінка {% endblock title %}
+
+{% block content %}
+  <div class="centered">
+    <select name="groups" id="groups">
+      {% for group in groups %}
+        <option value="group-{{group[0]}}">{{group[1]}}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="centered">
+    <table class="table table-bordered border-primary">
+      <thead>
+        <tr>
+          <th scope="col">Прізвище</th>
+          <th scope="col">Ім'я</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="content-list">
+        {% for student in students %}
+          <tr class="group-{{ student[3] }}">
+          {% if student[0] in leaders %}
+            <td class="student-leader">{{ student[2] }}</td>
+            <td class="student-leader">{{ student[1] }}</td>
+            <td><button type="button" class="btn btn-secondary" disabled>Староста</button></td>
+          {% else %}
+            <td>{{ student[2] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>
+              <button type="button" class="btn btn-primary" onclick="location.href='/transfer?studentId='+{{student[0]}}">Перевести</button>
+              <button type="button" class="btn btn-outline-danger deleteStudent" id="{{student[0]}}">❌</button>
+            </td>
+          {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="centered">
+    <button type="button" class="btn btn-primary" onclick="location.href='/addStudent'">Додати студента</button>
+  </div>
+{% endblock content %}
+
+{% block js %}
+  <script type="module" src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock js %}

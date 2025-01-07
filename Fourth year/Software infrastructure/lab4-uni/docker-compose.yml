@@ -1,0 +1,22 @@
+services:
+    sql:
+        build: ./SQL
+        ports: 
+            - "3306:3306"
+        environment:  
+            MYSQL_ROOT_PASSWORD: root 
+    no-sql:
+        build: ./NO-SQL
+        ports: 
+            - "27017:27017"
+        
+    backend:
+        build: ./Backend
+        ports: 
+            - "5001:5001"
+                
+    frontend:
+        build: ./Frontend
+        ports: 
+            - "5002:5002"
+            
