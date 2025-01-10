@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %} Головна сторінка {% endblock title %}
+
+{% block content %}
+  <div class="centered">
+    <select name="groups" id="groups">
+      {% for group in groups %}
+        <option value="group-{{group.id}}">{{group.name}}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="centered">
+    <table class="table table-striped table-bordered border-primary">
+      <thead>
+        <tr>
+          <th scope="col">Прізвище</th>
+          <th scope="col">Ім'я</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="content-list">
+        {% for student in students %}
+          <tr class="group-{{ student.groupId }}">
+          {% if student.id in leaders %}
+            <td class="student-leader">{{ student.surname }}</td>
+            <td class="student-leader">{{ student.name }}</td>
+            <td><button type="button" class="btn btn-secondary" disabled>Староста</button></td>
+          {% else %}
+            <td>{{ student.surname }}</td>
+            <td>{{ student.name }}</td>
+            <td>
+              <button type="button" class="btn btn-primary" onclick="location.href='/transfer?studentId='+{{student.id}}">Перевести</button>
+              <button type="button" class="btn btn-outline-danger deleteStudent" id="{{student.id}}">❌</button>
+            </td>
+          {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="centered">
+    <button type="button" class="btn btn-primary" onclick="location.href='/addStudent'">Додати студента</button>
+  </div>
+
+  <br>
+  <div>
+    <h2 class="centered">Емблема групи</h2>
+    {# volume and blob image #}
+    <div class="centered">
+      {% for group in groups %}
+        <img class="group-{{group.id}}" src="static/images/{{group.img}}">
+      {% endfor %}
+    </div>
+    <br>
+    <form class="centered" action="/changeImage" method="post" enctype="multipart/form-data">
+      <input id="newImage" name="file" type="file">
+      <input id="imageGroupId" name="groupId" type="hidden">
+      <button id="changeImage">Змінити зображення</button>
+    </form>
+  </div>
+
+{% endblock content %}
+
+{% block js %}
+  <script type="module" src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock js %}

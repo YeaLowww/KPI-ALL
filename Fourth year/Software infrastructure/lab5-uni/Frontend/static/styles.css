@@ -1,0 +1,45 @@
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    padding: 10px;
+}
+
+nav {
+    font-weight: bold;
+    font-size: 30;
+}
+
+#groups {
+    width: 100px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.table {
+    width:800px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.student-leader {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.add-form {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#groups-big {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+img {
+    max-width: 200px;
+}
