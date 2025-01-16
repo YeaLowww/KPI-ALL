@@ -1,0 +1,82 @@
+version: "3.8"
+
+services:
+    frontend:
+        build:
+            context: ./frontend
+        ports:
+            - "55001:55001"
+        depends_on:
+            - backend
+        networks:
+            - app-network
+
+    backend:
+        build:
+            context: ./backend
+        ports:
+            - "55002:55002"
+        depends_on:
+            - mongodb
+            - mysql
+            - rabbitmq
+        networks:
+            - app-network
+        environment:
+            - MYSQL_HOST=mysql
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=root
+            - MYSQL_DATABASE=lab4DB
+            - MONGO_URI=mongodb://mongodb:27017/schedules_db
+            - RABBITMQ_HOST=rabbitmq
+        volumes:
+            - student_images:/backend/images
+
+    mongodb:
+        build:
+            context: ./databases/nosql
+        networks:
+            - app-network
+        environment:
+            - MONGO_INITDB_DATABASE=schedules_db
+        volumes:
+            - mongodb_data:/data/db
+        ports:
+            - "27017:27017"
+
+    mysql:
+        build:
+            context: ./databases/sql
+        networks:
+            - app-network
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=lab4DB
+        volumes:
+            - mysql_data:/var/lib/mysql
+
+    consumer:
+        build:
+            context: ./backend
+        command: ["python", "src/lab_4_backend/consumer.py"]
+        depends_on:
+            - rabbitmq
+        networks:
+            - app-network
+
+    rabbitmq:
+        image: "rabbitmq:3-management"
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        networks:
+            - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    mongodb_data:
+    mysql_data:
+    student_images:

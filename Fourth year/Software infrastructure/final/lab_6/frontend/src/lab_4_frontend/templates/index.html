@@ -1,0 +1,190 @@
+{% extends "base.html" %} {% block title %}Головна сторінка{% endblock title %}
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            <div class="card card-custom">
+                <div class="card-header text-center">
+                    <h4>Обери групу</h4>
+                </div>
+                <div class="card-body">
+                    <select name="groups" id="groups" class="form-select">
+                        {% for group in groups %}
+                        <option value="group-{{group[0]}}">{{group[1]}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-8">
+            <div class="card card-custom">
+                <div class="card-header text-center">
+                    <h4>Список студентів</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive table-custom">
+                        <table
+                            class="table table-striped table-bordered table-hover"
+                        >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Фото</th>
+                                    <th scope="col">Прізвище</th>
+                                    <th scope="col">Ім'я</th>
+                                    <th scope="col">Дії</th>
+                                </tr>
+                            </thead>
+                            <tbody id="content-list">
+                                {% for student in students %}
+                                <tr class="group-{{ student[3] }}">
+                                    <td>
+                                        {% if student[4] %}
+                                        <img
+                                            src="/students/{{ student[0] }}/get_image/"
+                                            alt="Фото студента"
+                                            class="img-thumbnail"
+                                            style="
+                                                width: 50px;
+                                                height: 50px;
+                                                object-fit: cover;
+                                            "
+                                            onerror="this.onerror=null;this.src='path_to_placeholder_image.jpg';"
+                                        />
+                                        {% else %}
+                                        <span>Фото не завантажено</span>
+                                        {% endif %}
+                                    </td>
+                                    {% if student[0] in leaders %}
+                                    <td class="text-success">
+                                        {{ student[1] }}
+                                    </td>
+                                    <td class="text-success">
+                                        {{ student[2] }}
+                                    </td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="btn btn-custom-secondary"
+                                            disabled
+                                        >
+                                            Староста
+                                        </button>
+                                    </td>
+                                    {% else %}
+                                    <td>{{ student[1] }}</td>
+                                    <td>{{ student[2] }}</td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="btn btn-custom"
+                                            onclick="location.href='/transfer?studentId={{ student[0] }}'"
+                                        >
+                                            Перевести
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="btn btn-danger deleteStudent"
+                                            id="{{student[0]}}"
+                                        >
+                                            ❌
+                                        </button>
+                                        {% if student[4] %}
+                                        <button
+                                            type="button"
+                                            class="btn btn-custom"
+                                            onclick="openImageUploadModal('{{ student[0] }}')"
+                                        >
+                                            Змінити фото
+                                        </button>
+                                        {% else %}
+                                        <button
+                                            type="button"
+                                            class="btn btn-custom"
+                                            onclick="openImageUploadModal('{{ student[0] }}')"
+                                        >
+                                            Завантажити фото
+                                        </button>
+                                        {% endif %} {% if student[4] %}
+                                        <button
+                                            type="button"
+                                            class="btn btn-warning"
+                                            onclick="deleteImage('{{ student[0] }}')"
+                                        >
+                                            Видалити фото
+                                        </button>
+                                        {% endif %}
+                                    </td>
+                                    {% endif %}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-6 text-center">
+            <button
+                type="button"
+                class="btn btn-success"
+                onclick="location.href='/addStudent'"
+            >
+                Додати студента
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Модальне вікно для завантаження фото -->
+<div class="modal fade modal-custom" tabindex="-1" id="uploadImageModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Завантажити фото</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <input
+                    type="file"
+                    id="studentImageFile"
+                    accept="image/*"
+                    class="form-control"
+                />
+            </div>
+            <div class="modal-footer">
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                >
+                    Закрити
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="uploadImage()"
+                >
+                    Завантажити
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %} {% block js %}
+<script
+    type="module"
+    src="{{ url_for('static', filename='index.js') }}"
+></script>
+{% endblock js %}

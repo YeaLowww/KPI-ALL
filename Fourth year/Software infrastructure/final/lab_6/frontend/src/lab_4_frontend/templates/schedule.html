@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% block title %} Розклад {% endblock title %} {%
+block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            <div class="card card-custom">
+                <div class="card-header text-center">
+                    <h4>Обери групу</h4>
+                </div>
+                <div class="card-body">
+                    <select name="groups" id="groups" class="form-select">
+                        {% for group in groups %}
+                        <option value="group-{{group[0]}}">{{group[1]}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-8">
+            <div class="card card-custom">
+                <div class="card-header text-center">
+                    <h4>Розклад</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive table-custom">
+                        <table class="table table-bordered border-primary">
+                            <thead>
+                                <tr>
+                                    <th scope="col">День</th>
+                                    <th scope="col">Пара</th>
+                                    <th scope="col">Назва</th>
+                                    <th scope="col">Опис</th>
+                                </tr>
+                            </thead>
+                            <tbody id="content-list">
+                                {% for subject in schedule %}
+                                <tr class="group-{{ subject.groupId }}">
+                                    <td>{{ subject.day }}</td>
+                                    <td>{{ subject.pair }}</td>
+                                    <td>{{ subject.name }}</td>
+                                    <td>{{ subject.description }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %} {% block js %}
+<script
+    type="module"
+    src="{{ url_for('static', filename='index.js') }}"
+></script>
+{% endblock js %}

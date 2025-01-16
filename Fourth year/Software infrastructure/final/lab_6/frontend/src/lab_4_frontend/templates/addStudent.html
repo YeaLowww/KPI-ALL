@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %} Додавання студентів {% endblock title %}
+
+{% block content %}
+  <div class="add-form">
+    <h2 class="title-text text-center mb-4">Додавання студента</h2>
+    
+    <div class="mb-3 row">
+      <label for="name" class="col-sm-3 col-form-label">Ім'я</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="name" placeholder="Введіть ім'я">
+      </div>
+    </div>
+    
+    <div class="mb-3 row">
+      <label for="surname" class="col-sm-3 col-form-label">Прізвище</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="surname" placeholder="Введіть прізвище">
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <label for="groups" class="col-sm-3 col-form-label">Група</label>
+      <div class="col-sm-9">
+        <select name="groups" id="groups-big" class="styled-select">
+          {% for group in groups %}
+            <option value="group-{{group[0]}}">{{group[1]}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-confirm" id="addStudent">Додати студента</button>
+  </div>
+{% endblock content %}
+
+{% block js %}
+  <script type="module" src="{{ url_for('static', filename='addStudent.js') }}"></script>
+{% endblock js %}

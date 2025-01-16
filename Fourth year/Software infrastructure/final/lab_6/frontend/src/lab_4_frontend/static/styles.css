@@ -1,0 +1,268 @@
+/* General body background */
+body {
+    background-color: #f4f6f9;
+    font-family: "Arial", sans-serif;
+    color: #333;
+}
+
+/* Title text style */
+.title-text {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Error text */
+.error-text {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Styled form container */
+.add-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Form input fields */
+.add-form input,
+.add-form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Focus on input and select fields */
+.add-form input:focus,
+.add-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Styled dropdown */
+.add-form select {
+    background-color: #f8f9fa;
+}
+
+/* Confirmation button */
+.btn-confirm {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Disabled button */
+.btn-confirm:disabled {
+    background-color: #d4d4d4;
+    cursor: not-allowed;
+}
+
+/* Button hover effect */
+.btn-confirm:hover:enabled {
+    background-color: #218838;
+}
+
+/* Centered content */
+.centered {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Button hover and active for cross actions */
+.btn-danger {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Card header style */
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Table header style */
+.table thead th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Modal styles */
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-footer .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffdd57;
+}
+
+/* Active link style */
+.navbar-nav .nav-link.active {
+    color: #ffdd57;
+    font-weight: bold;
+}
+
+/* Custom container style */
+.container-custom {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Custom card style */
+.card-custom {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-custom .card-header {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-custom .card-body {
+    padding: 20px;
+}
+
+/* Custom table style */
+.table-custom {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-custom thead th {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.table-custom tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Custom button styles */
+.btn-custom {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
+.btn-custom-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Custom modal styles */
+.modal-custom .modal-header {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-custom .modal-footer .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal-custom .modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Custom navbar styles */
+.navbar-custom {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.navbar-custom .navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #ffdd57;
+}
+
+.navbar-custom .navbar-nav .nav-link.active {
+    color: #ffdd57;
+    font-weight: bold;
+}
