@@ -1,0 +1,78 @@
+
+                                      ARENA Simulation Results
+                                      YeaLow - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date :12/23/2024
+Analyst: denyyeess@gmail.com                                         Model revision date:12/23/2024
+
+Replication ended at time      : 1.1018723 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Entity 1.VATime                             .01940     (Insuf)     5.1684E-5 .11024        140    
+Entity 1.NVATime                            .00000     (Insuf)    .00000     .00000        140    
+Entity 1.WaitTime                           .00000     (Insuf)    .00000     .00000        140    
+Entity 1.TranTime                           .22226     (Insuf)    .00000     .90000        140    
+Entity 1.OtherTime                          .00000     (Insuf)    .00000     .00000        140    
+Entity 1.TotalTime                          .24166     (Insuf)    .00202     .90180        140    
+M1.Queue.WaitingTime                        .00000     (Insuf)    .00000     .00000         34    
+M3.Queue.WaitingTime                        .00000     (Insuf)    .00000     .00000         25    
+M2.Queue.WaitingTime                        .00000     (Insuf)    .00000     .00000         30    
+M5.Queue.WaitingTime                        .00000     (Insuf)    .00000     .00000         23    
+M4.Queue.WaitingTime                        .00000     (Insuf)    .00000     .00000         28    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Entity 1.WIP                                30.704     (Insuf)    .00000     71.000     .00000    
+Resource 5.NumberBusy                       .34818     (Insuf)    .00000     1.0000     .00000    
+Resource 5.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 5.Utilization                      .34818     (Insuf)    .00000     1.0000     .00000    
+Resource 4.NumberBusy                       .48752     (Insuf)    .00000     1.0000     .00000    
+Resource 4.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 4.Utilization                      .48752     (Insuf)    .00000     1.0000     .00000    
+Resource 3.NumberBusy                       .53766     (Insuf)    .00000     1.0000     .00000    
+Resource 3.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 3.Utilization                      .53766     (Insuf)    .00000     1.0000     .00000    
+Resource 2.NumberBusy                       .50782     (Insuf)    .00000     1.0000     .00000    
+Resource 2.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 2.Utilization                      .50782     (Insuf)    .00000     1.0000     .00000    
+Resource 1.NumberBusy                       .58355     (Insuf)    .00000     1.0000     .00000    
+Resource 1.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 1.Utilization                      .58355     (Insuf)    .00000     1.0000     .00000    
+M1.Queue.NumberInQueue                      .00000     (Insuf)    .00000     .00000     .00000    
+M3.Queue.NumberInQueue                      .00000     (Insuf)    .00000     .00000     .00000    
+M2.Queue.NumberInQueue                      .00000     (Insuf)    .00000     .00000     .00000    
+M5.Queue.NumberInQueue                      .00000     (Insuf)    .00000     .00000     .00000    
+M4.Queue.NumberInQueue                      .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Entity 1.NumberIn                           140.00    
+Entity 1.NumberOut                          140.00    
+Resource 5.NumberSeized                     23.000    
+Resource 5.ScheduledUtilization             .34818    
+Resource 4.NumberSeized                     28.000    
+Resource 4.ScheduledUtilization             .48752    
+Resource 3.NumberSeized                     25.000    
+Resource 3.ScheduledUtilization             .53766    
+Resource 2.NumberSeized                     30.000    
+Resource 2.ScheduledUtilization             .50782    
+Resource 1.NumberSeized                     34.000    
+Resource 1.ScheduledUtilization             .58355    
+System.NumberOut                            140.00    
+
+
+Simulation run time: 0.33 minutes.
+Simulation run complete.

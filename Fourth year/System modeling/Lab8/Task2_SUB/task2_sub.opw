@@ -1,0 +1,53 @@
+[RESOURCES]
+Resource 5
+Resource 4
+Resource 3
+Resource 2
+Resource 1
+[VARIABLES]
+Fourth_Free?.NumberOut False
+to5.NumberIn
+Fifth_Free?.NumberOut True
+Fifth_Free?.NumberOut False
+to5.NumberOut
+Finished 3.NumberOut
+to4.NumberOut
+to3.NumberOut
+Finished 4.NumberOut
+Third_Free?.NumberOut False
+Third_Free?.NumberOut True
+Finished 1.NumberOut
+Create.NumberOut
+Component 1.NumberOut
+Component 2.NumberOut
+Component 3.NumberOut
+Component 4.NumberOut
+Component 5.NumberOut
+Component 1.NumberIn
+Component 2.NumberIn
+Component 3.NumberIn
+Component 4.NumberIn
+Component 5.NumberIn
+M1.NumberOut
+M2.NumberOut
+M3.NumberOut
+M4.NumberOut
+M5.NumberOut
+to1.NumberIn
+M1.NumberIn
+M2.NumberIn
+M3.NumberIn
+M4.NumberIn
+M5.NumberIn
+to2.NumberIn
+Finished 2.NumberOut
+to4.NumberIn
+Second_Free?.NumberOut True
+to3.NumberIn
+First_Free?.NumberOut True
+First_Free?.NumberOut False
+Second_Free?.NumberOut False
+to1.NumberOut
+Fourth_Free?.NumberOut True
+Finsihed 5.NumberOut
+to2.NumberOut
