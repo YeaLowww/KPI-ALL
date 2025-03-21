@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build\DESL1.hex'
+elf = 'build\DESL1.elf'

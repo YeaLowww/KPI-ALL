@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+firmware = 'build\DESL2.hex'
+elf = 'build\DESL2.elf'
+rfc2217ServerPort = 4000
