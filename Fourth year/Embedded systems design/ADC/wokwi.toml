@@ -1,0 +1,7 @@
+[wokwi]
+version = 2
+elf = "build/ADC.elf"
+firmware = "build/ADC.hex"
+bin = "build/ADC.bin"
+rfc2217ServerPort = 4000
+gdbServerPort = 3333

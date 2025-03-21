@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "author": "Yassine Aadel",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-st-nucleo-c031c6", "id": "nucleo", "top": 0.83, "left": 66.22, "attrs": {} },
+	{ "type": "board-st-nucleo-c031c6", "id": "nucleo1", "top": 383, "left": 66.22, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 119.15,
+      "left": -28.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 195.95,
+      "left": -28.8,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 82.8, "left": -73, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led2", "top": 159.6, "left": -73, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:PA2", "", [] ],
+    [ "r1:1", "led1:A", "green", [ "v-9.6", "h-19.2", "v48" ] ],
+    [ "nucleo:GND.2", "led1:C", "black", [ "h-163.2", "v-38.4" ] ],
+    [ "r2:2", "nucleo:PC6", "green", [ "v0" ] ],
+    [ "r1:2", "nucleo:PD0", "green", [ "v0", "h46.8" ] ],
+    [ "led2:A", "r2:1", "green", [ "v0" ] ],
+    [ "led2:C", "nucleo:GND.2", "green", [ "v9.6", "h-18.8", "v-48" ] ]
+  ],
+  "dependencies": {}
+}
